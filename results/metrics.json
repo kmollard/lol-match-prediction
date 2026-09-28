@@ -1,0 +1,105 @@
+{
+  "train_games_used": 30883,
+  "holdout_games": 6177,
+  "holdout_range": [
+    "2022-06-12",
+    "2022-12-27"
+  ],
+  "holdout_unseen_player_frac": 0.1053909664885867,
+  "scores": {
+    "baseline (coin toss, zero kills, mean length)": {
+      "score": -0.5043145722587461,
+      "auc": 0.5,
+      "kills_mae": 2.864108790675085,
+      "length_rmse": 340.19351739373104,
+      "part_winner": 0.0,
+      "part_kills": -0.40175254034257407,
+      "part_length": -0.10256203191617205
+    },
+    "baseline (position-mean kills, league-mean length)": {
+      "score": 11.45911981711392,
+      "auc": 0.5,
+      "kills_mae": 1.8721062004209164,
+      "length_rmse": 337.35412610178014,
+      "part_winner": 0.0,
+      "part_kills": 11.282612480319006,
+      "part_length": 0.176507336794914
+    },
+    "v2: logistic regression + XGBoost": {
+      "score": 24.30553544126593,
+      "auc": 0.6695335076227545,
+      "kills_mae": 1.7664719545109486,
+      "length_rmse": 334.3021610986587,
+      "part_winner": 11.302233841516971,
+      "part_kills": 12.52683210234454,
+      "part_length": 0.4764694974044193
+    },
+    "v2, kills rounded to integers": {
+      "score": 24.43595821485939,
+      "auc": 0.6695335076227545,
+      "kills_mae": 1.7553990610328638,
+      "length_rmse": 334.3021610986587,
+      "part_winner": 11.302233841516971,
+      "part_kills": 12.657254875938,
+      "part_length": 0.4764694974044193
+    }
+  },
+  "winner_auc_ablation": {
+    "Elo only": 0.6577894275336935,
+    "+ champion win rate": 0.6619652140978309,
+    "+ on-main (report's model)": 0.661783536672163,
+    "+ team Elo (v2)": 0.6695335076227545
+  },
+  "calibration": [
+    {
+      "pred": 0.1693,
+      "actual": 0.1974,
+      "n": 618
+    },
+    {
+      "pred": 0.2821,
+      "actual": 0.3172,
+      "n": 618
+    },
+    {
+      "pred": 0.3534,
+      "actual": 0.3387,
+      "n": 617
+    },
+    {
+      "pred": 0.4065,
+      "actual": 0.4239,
+      "n": 618
+    },
+    {
+      "pred": 0.4507,
+      "actual": 0.4434,
+      "n": 618
+    },
+    {
+      "pred": 0.4933,
+      "actual": 0.436,
+      "n": 617
+    },
+    {
+      "pred": 0.5375,
+      "actual": 0.5647,
+      "n": 618
+    },
+    {
+      "pred": 0.5919,
+      "actual": 0.5754,
+      "n": 617
+    },
+    {
+      "pred": 0.6687,
+      "actual": 0.6278,
+      "n": 618
+    },
+    {
+      "pred": 0.792,
+      "actual": 0.6958,
+      "n": 618
+    }
+  ]
+}

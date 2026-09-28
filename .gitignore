@@ -1,0 +1,6 @@
+data/*
+!data/README.md
+*.csv
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
